@@ -14,8 +14,8 @@ LOGGER = singer.get_logger()
 REQUIRED_CONFIG_KEYS = [
     'client_id',
     'client_secret',
-    'refresh_token',
-    'user_agent'
+    # 'refresh_token',
+    # 'user_agent'
 ]
 
 def do_discover():
@@ -34,8 +34,9 @@ def main():
     with HelpScoutClient(parsed_args.config_path,
                          parsed_args.config['client_id'],
                          parsed_args.config['client_secret'],
-                         parsed_args.config['refresh_token'],
-                         parsed_args.config['user_agent']) as client:
+                         parsed_args.config.get('refresh_token',None),
+                         parsed_args.config.get('user_agent', None),
+                         ) as client:
 
         state = {}
         if parsed_args.state:
