@@ -124,55 +124,34 @@
       }
     },
     "tags": {
-      "anyOf": [
-        {
-          "type": "array",
-          "items": {
-            "type": "object",
-            "additionalProperties": false,
-            "properties": {
-              "id": {
-                "type": ["null", "integer"]
-              },
-              "color": {
-                "type": ["null", "string"]
-              },
-              "tag": {
-                "type": ["null", "string"]
-              }
-            }
+      "type": ["array", "null"],
+      "items": {
+        "type": "object",
+        "additionalProperties": false,
+        "properties": {
+          "id": {
+            "type": ["null", "integer"]
+          },
+          "color": {
+            "type": ["null", "string"]
+          },
+          "tag": {
+            "type": ["null", "string"]
           }
-        },
-        {
-          "type": "null"
         }
-      ]
+      }
     },
     "cc": {
-      "anyOf": [
-        {
-          "type": "array",
-          "items": {
-            "type": "string"
-          }
-        },
-        {
-          "type": "null"
-        }
-      ]
+      "type": ["array", "null"],
+      "items": {
+        "type": "string"
+      }
     },
     "bcc": {
-      "anyOf": [
-        {
-          "type": "array",
-          "items": {
-            "type": "string"
-          }
-        },
-        {
-          "type": "null"
-        }
-      ]
+      "type": ["array", "null"],
+      "items": {
+        "type": "string"
+      }
     },
     "primary_customer": {
       "type": ["null", "object"],
@@ -199,32 +178,25 @@
       }
     },
     "custom_fields": {
-      "anyOf": [
-        {
-          "type": "array",
-          "items": {
-            "type": "object",
-            "additionalProperties": false,
-            "properties": {
-              "id": {
-                "type": ["null", "integer"]
-              },
-              "name": {
-                "type": ["null", "string"]
-              },
-              "value": {
-                "type": ["null", "string"]
-              },
-              "text": {
-                "type": ["null", "string"]
-              }
-            }
+      "type": ["array", "null"],
+      "items": {
+        "type": "object",
+        "additionalProperties": false,
+        "properties": {
+          "id": {
+            "type": ["null", "integer"]
+          },
+          "name": {
+            "type": ["null", "string"]
+          },
+          "value": {
+            "type": ["null", "string"]
+          },
+          "text": {
+            "type": ["null", "string"]
           }
-        },
-        {
-          "type": "null"
         }
-      ]
+      }
     }
   }
 }
